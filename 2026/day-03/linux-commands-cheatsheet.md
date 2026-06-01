@@ -2,86 +2,86 @@
 
 1. Commands Used in Process management -
 
-Command                   Purpose
+Command                   :Purpose
 
-ps -ef                    list all running process 
+ps -ef                    :list all running process 
    
-ps -aux                   show detailed process information
+ps -aux                   :show detailed process information
 
-top                       Real-time process monitoring                   
+top                       :Real-time process monitoring                   
 
-htop                      interactive process veiwer
+htop                      :interactive process veiwer
 
-kill -9 PID               Forcefully kill any process 
+kill -9 PID               :Forcefully kill any process 
 
-pkill -U username         kill all processes running by specific user
+pkill -U username         :kill all processes running by specific user
 
-free -h                   check memory usage 
+free -h                   :check memory usage 
 
-uptime                    shows system run time since last reboot, system load, no. of user logged in 
+uptime                    :shows system run time since last reboot, system load, no. of user logged in 
 
-sar                       Historical performance statistics
+sar                       :Historical performance statistics
 
 ################################################################################################################
 
 2. File System Commands
 
-Command                   Purpose
+Command                   :Purpose
 
-pwd                       Show current directory
+pwd                       :Show current directory
 
-ls                        list file & directories 
+ls                        :list file & directories 
 
-ls -l                     detailed listing 
+ls -l                     :detailed listing 
 
-ls -la                    list hidden files also
+ls -la                    :list hidden files also
 
-cd                        change directory
+cd                        :change directory
 
-touch                     create empty file
+touch                     :create empty file
 
-mkdir                     make directory
+mkdir                     :make directory
 
-cp                        copy file
+cp                        :copy file
 
-cp -r                     copy directory
+cp -r                     :copy directory
 
-mv                        rename file or directory 
+mv                        :rename file or directory 
 
-rm                        delete file 
+rm                        :delete file 
 
-rm -r                     delete directory
+rm -r                     :delete directory
 
-cat                       to view file content
+cat                       :to view file content
 
-df -h                     show disk space usage
+df -h                     :show disk space usage
 
-du -sh                    show specific directory size
+du -sh                    :show specific directory size
 
-chmod                     change permission of file 
+chmod                     :change permission of file 
 
-chown                     change owner of file
+chown                     :change owner of file
 
-chgrp                     change group of file 
+chgrp                     :change group of file 
 
-ln                        to make hard link 
+ln                        :to make hard link 
 
-ln -s                     to make soft link
+ln -s                     :to make soft link
 
 ####################################################################################################
 
 3. Networking Commands 
 
-Command                   Purpose 
+Command                   :Purpose 
 
-nslookup google.com       DNS lookup 
+nslookup google.com       :DNS lookup 
 
-dig google.com            Detailed DNS query
+dig google.com            :Detailed DNS query
 
-cat /etc/resolv.conf      DNS server configuration file 
+cat /etc/resolv.conf      :DNS server configuration file 
 
-netstat -anu              display network connections and statistics.
+netstat -anu              :display network connections and statistics.
 
-curl https://google.com   Test Web connectivity
+curl https://google.com   :Test Web connectivity
 
-wget URL                  Download file from URL 
+wget URL                  :Download file from URL 
