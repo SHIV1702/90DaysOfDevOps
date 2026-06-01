@@ -2,25 +2,25 @@
 
 1. Commands Used in Process management -
 
-Command                   Purpose
+     Command                                                     Purpose
 
-ps -ef                    list all running process 
+     ps -ef                                                      list all running process 
    
-ps -aux                   show detailed process information
+     ps -aux                                                     show detailed process information
 
-top                       Real-time process monitoring                   
+     top                                                         Real-time process monitoring                   
 
-htop                      interactive process veiwer
+     htop                                                        interactive process veiwer
 
-kill -9 PID               Forcefully kill any process 
+     kill -9 PID                                                 Forcefully kill any process 
 
-pkill -U username         kill all processes running by specific user
+     pkill -U username                                           kill all processes running by specific user
 
-free -h                   check memory usage 
+     free -h                                                     check memory usage 
 
-uptime                    shows system run time since last reboot, system load, no. of user logged in 
+     uptime                                                      shows system run time since last reboot, system load, no. of user logged in 
 
-sar                       Historical performance statistics
+     sar                                                         Historical performance statistics
 
 #####################################################################################################
 
