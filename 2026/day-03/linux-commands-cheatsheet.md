@@ -1,7 +1,8 @@
-############################   Linux Commands Cheatsheet   ###################################################
+############################   Linux Commands Cheatsheet   ######################################
 
 1. Commands Used in Process management -
 
+<<<<<<< HEAD
 Command                   :Purpose
 
 ps -ef                    :list all running process 
@@ -22,7 +23,7 @@ uptime                    :shows system run time since last reboot, system load,
 
 sar                       :Historical performance statistics
 
-################################################################################################################
+#####################################################################################################
 
 2. File System Commands
 
@@ -68,7 +69,7 @@ ln                        :to make hard link
 
 ln -s                     :to make soft link
 
-####################################################################################################
+#############################################################################################
 
 3. Networking Commands 
 
