@@ -2,7 +2,7 @@
 
 1. Commands Used in Process management -
 
-     Command                                                     Purpose
+     Command                                                                             Purpose
 
      ps -ef                                                      list all running process 
    
