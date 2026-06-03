@@ -12,9 +12,8 @@ Purpose: Verify Docker daemon health and collect system resource information bef
 
 ## 1. Check Kernel Information
 
-```bash
-uname -a
-```
+shiv@SHIV:~$ uname -a
+Linux SHIV 5.15.167.4-microsoft-standard-WSL2 #1 SMP Tue Nov 5 00:21:55 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
 
 Observation:
 
@@ -23,9 +22,20 @@ Observation:
 
 ## 2. Check OS Version
 
-```bash
-cat /etc/os-release
-```
+shiv@SHIV:~$ cat /etc/os-release
+PRETTY_NAME="Ubuntu 24.04.4 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.4 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
 
 Observation:
 
