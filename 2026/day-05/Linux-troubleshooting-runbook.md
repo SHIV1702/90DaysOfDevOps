@@ -127,9 +127,41 @@ Observation:
 
 ## 7. Check Disk Space
 
-```bash
-df -h
-```
+shiv@SHIV:~/90DaysOfDevOps/2026/day-05$ df -h
+
+Filesystem      Size  Used Avail Use% Mounted on
+
+none            3.8G     0  3.8G   0% /usr/lib/modules/5.15.167.4-microsoft-standard-WSL2
+
+none            3.8G  4.0K  3.8G   1% /mnt/wsl
+
+drivers         476G  446G   31G  94% /usr/lib/wsl/drivers
+
+/dev/sdc       1007G   19G  938G   2% /
+
+none            3.8G   72K  3.8G   1% /mnt/wslg
+
+none            3.8G     0  3.8G   0% /usr/lib/wsl/lib
+
+rootfs          3.8G  2.4M  3.8G   1% /init
+
+none            3.8G  2.0M  3.8G   1% /run
+
+none            3.8G     0  3.8G   0% /run/lock
+
+none            3.8G     0  3.8G   0% /run/shm
+
+tmpfs           4.0M     0  4.0M   0% /sys/fs/cgroup
+
+none            3.8G   96K  3.8G   1% /mnt/wslg/versions.txt
+
+none            3.8G   96K  3.8G   1% /mnt/wslg/doc
+
+C:\             476G  446G   31G  94% /mnt/c
+
+tmpfs           762M   16K  762M   1% /run/user/1000
+
+tmpfs           762M   16K  762M   1% /run/user/1002
 
 Observation:
 
