@@ -95,7 +95,9 @@ Observation:
 ## 5. Check Docker Process Resource Usage
 
 shiv@SHIV:~$ ps -o pid,pcpu,pmem,comm -C dockerd
+
     PID %CPU %MEM COMMAND
+    
     388  1.6  1.6 dockerd
 
 Observation:
