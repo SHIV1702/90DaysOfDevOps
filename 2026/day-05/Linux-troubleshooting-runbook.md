@@ -13,6 +13,7 @@ Purpose: Verify Docker daemon health and collect system resource information bef
 ## 1. Check Kernel Information
 
 shiv@SHIV:~$ uname -a
+
 Linux SHIV 5.15.167.4-microsoft-standard-WSL2 #1 SMP Tue Nov 5 00:21:55 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
 
 Observation:
