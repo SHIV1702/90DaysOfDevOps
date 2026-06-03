@@ -61,9 +61,13 @@ Observation:
 
 ## 3. Create Test Directory
 
-```bash
 mkdir -p /tmp/runbook-demo
-```
+
+shiv@SHIV:~$ cd /tmp/runbook-demo/
+
+shiv@SHIV:/tmp/runbook-demo$ l
+
+total 0
 
 Observation:
 
