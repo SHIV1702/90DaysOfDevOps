@@ -170,9 +170,9 @@ Observation:
 
 ## 8. Check Log Directory Size
 
-```bash
-du -sh /var/log
-```
+shiv@SHIV:/var$ sudo du -sh /var/log
+
+647M    /var/log
 
 Observation:
 
@@ -184,9 +184,17 @@ Observation:
 
 ## 9. Check Listening Ports
 
-```bash
-ss -tulpn | grep docker
-```
+shiv@SHIV:~$ sudo ss -tulpn | grep docker
+
+tcp   LISTEN 0      4096          0.0.0.0:8080       0.0.0.0:*    users:(("docker-proxy",pid=3077,fd=7))
+
+tcp   LISTEN 0      4096          0.0.0.0:10000      0.0.0.0:*    users:(("docker-proxy",pid=3115,fd=7))
+
+tcp   LISTEN 0      4096          0.0.0.0:32775      0.0.0.0:*    users:(("docker-proxy",pid=2858,fd=7))
+
+tcp   LISTEN 0      4096          0.0.0.0:32774      0.0.0.0:*    users:(("docker-proxy",pid=2823,fd=7))
+
+tcp   LISTEN 0      4096          0.0.0.0:32772      0.0.0.0:*    users:(("docker-proxy",pid=2673,fd=7))
 
 Observation:
 
@@ -194,10 +202,50 @@ Observation:
 
 ## 10. Verify Docker API Response
 
-```bash
-docker info
-```
+shiv@SHIV:~$ sudo docker info
 
+Client:
+
+ Version:    29.1.3
+ 
+ Context:    default
+ 
+ Debug Mode: false
+ 
+ Plugins:
+ 
+ buildx: Docker Buildx (Docker Inc.)
+  
+ Version:  v0.34.1
+    
+ Path:     /usr/libexec/docker/cli-plugins/docker-buildx
+ 
+  compose: Docker Compose (Docker Inc.)
+  
+  Version:  v5.1.4
+  
+  Path:     /usr/libexec/docker/cli-plugins/docker-compose
+  
+  trust: Manage trust on Docker images (Docker Inc.)
+  
+  Version:  29.1.3
+  
+   Path:     /usr/libexec/docker/cli-plugins/docker-trust
+
+Server:
+
+ Containers: 27
+ 
+  Running: 21
+  
+  Paused: 0
+  
+  Stopped: 6
+  
+ Images: 29
+ 
+ Server Version: 29.1.3
+ 
 Observation:
 
 * Docker daemon responding successfully.
@@ -209,9 +257,20 @@ Observation:
 
 ## 11. Check Docker Service Logs
 
-```bash
-journalctl -u docker -n 50
-```
+shiv@SHIV:~$
+shiv@SHIV:~$ sudo journalctl -u docker -n 50
+
+Jun 03 11:35:36 SHIV dockerd[284]: time="2026-06-03T11:35:36.524174486Z" level=error msg="[resolver] 
+
+Jun 03 11:35:36 SHIV dockerd[284]: time="2026-06-03T11:35:36.784453313Z" level=error msg="[resolver] 
+
+Jun 03 11:35:37 SHIV dockerd[284]: time="2026-06-03T11:35:37.237674406Z" level=error msg="[resolver] 
+
+Jun 03 11:35:37 SHIV dockerd[284]: time="2026-06-03T11:35:37.237732271Z" level=error msg="[resolver] 
+
+Jun 03 11:35:37 SHIV dockerd[284]: time="2026-06-03T11:35:37.280226426Z" level=error msg="[resolver] 
+
+Jun 03 11:35:37 SHIV dockerd[284]: time="2026-06-03T11:35:37.280243224Z" level=error msg="[resolver] 
 
 Observation:
 
@@ -220,9 +279,13 @@ Observation:
 
 ## 12. Follow Recent System Logs
 
-```bash
-tail -n 50 /var/log/syslog
-```
+shiv@SHIV:~$ sudo tail -n 50 /var/log/syslog
+
+2026-06-03T11:38:00.557837+00:00 SHIV dockerd[284]: time="2026-06-03T11:38:00.557604643Z" level=error msg="[resolver] failed to query external DNS server" client-addr="udp:10.255.255.254:58071" dns-server="udp:10.255.255.254:53" error="read udp 10.255.255.254:58071->10.255.255.254:53: i/o timeout" question=";otel-collector.\tIN\t AAAA"
+
+2026-06-03T11:38:00.829779+00:00 SHIV dockerd[284]: time="2026-06-03T11:38:00.829466780Z" level=error msg="[resolver] failed to query external DNS server" client-addr="udp:10.255.255.254:59636" dns-server="udp:10.255.255.254:53" error="read udp 10.255.255.254:59636->10.255.255.254:53: i/o timeout" question=";otel-collector.\tIN\t A"
+
+2026-06-03T11:38:01.475752+00:00 SHIV dockerd[284]: time="2026-06-03T11:38:01.475002091Z" level=error msg="[resolver] failed to query external DNS server" client-addr="udp:10.255.255.254:34328" dns-server="udp:10.255.255.254:53" error="read udp 10.255.255.254:34328->10.255.255.254:53: 
 
 Observation:
 
@@ -244,16 +307,14 @@ Observation:
 
 ### 1. Restart Service
 
-```bash
 sudo systemctl restart docker
 sudo systemctl status docker
-```
+
 
 ### 2. Increase Investigation
 
-```bash
 journalctl -u docker --since "1 hour ago"
-```
+
 
 Look for:
 
@@ -263,15 +324,12 @@ Look for:
 
 ### 3. Collect Deep Diagnostics
 
-```bash
 strace -p <dockerd_pid>
-```
 
 or
 
-```bash
 docker system events
-```
+
 
 Use when:
 
