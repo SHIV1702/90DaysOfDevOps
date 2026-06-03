@@ -99,7 +99,7 @@ shiv@SHIV:~$ ps -o pid,pcpu,pmem,comm -C dockerd
     PID %CPU %MEM COMMAND
     
     388  1.6  1.6 dockerd
-
+    
 Observation:
 
 * Docker daemon consuming low CPU and memory.
