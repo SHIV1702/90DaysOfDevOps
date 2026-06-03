@@ -76,8 +76,11 @@ Observation:
 ## 4. Copy and Verify File
 
 shiv@SHIV:/tmp/runbook-demo$ cp /etc/hosts /tmp/runbook-demo/hosts-copy
+
 shiv@SHIV:/tmp/runbook-demo$ ls -l /tmp/runbook-demo
+
 total 4
+
 -rw-r--r-- 1 shiv devops 394 Jun  3 05:13 hosts-copy
 
 Observation:
