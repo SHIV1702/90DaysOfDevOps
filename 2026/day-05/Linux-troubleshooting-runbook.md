@@ -108,6 +108,7 @@ Observation:
 ## 6. Check Memory Usage
 
 shiv@SHIV:~/90DaysOfDevOps/2026/day-05$ free -h
+
                total        used        free      shared  buff/cache   available
                
 Mem:           7.4Gi       3.9Gi       1.8Gi        50Mi       2.2Gi       3.6Gi
