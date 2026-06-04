@@ -12,38 +12,47 @@ Creates an empty file named `notes.txt`.
 
 ### 2. Write Data to the File
 
-```bash
-echo "Line 1: Linux File I/O Practice" > notes.txt
-echo "Line 2: Using redirection operator" >> notes.txt
-echo "Line 3: Using tee command" | tee -a notes.txt
-echo "Line 4: Learning file operations" >> notes.txt
-echo "Line 5: Reading files with cat" >> notes.txt
-echo "Line 6: Using head command" >> notes.txt
-echo "Line 7: Using tail command" >> notes.txt
-echo "Line 8: DevOps daily practice" >> notes.txt
-```
+devops@SHIV:~$ echo "This is 90DaysOfDevops day-05">notes.txt
+
+devops@SHIV:~$ echo "Today I am practicing linux">>notes.txt
+
+devops@SHIV:~$ echo "I performing an opertaion of editing a file by overwriting and appending it in the created file"|tee -a notes.txt
+
+I performing an opertaion of editing a file by overwriting and appending it in the created file
 
 ### 3. Read the Entire File
 
-```bash
-cat notes.txt
-```
+devops@SHIV:~$ cat notes.txt
+
+This is 90DaysOfDevops day-05
+
+Today I am practicing linux
+
+I performing an opertaion of editing a file by overwriting and appending it in the created file
 
 Displays all contents of the file.
 
 ### 4. Read the First Two Lines
 
-```bash
-head -n 2 notes.txt
-```
+devops@SHIV:~$ head -n 2 notes.txt
+
+This is 90DaysOfDevops day-05
+
+Today I am practicing linux
+
+devops@SHIV:~$
 
 Displays the first two lines.
 
 ### 5. Read the Last Two Lines
 
-```bash
-tail -n 2 notes.txt
-```
+devops@SHIV:~$ tail -n 2 notes.txt
+
+Today I am practicing linux
+
+I performing an opertaion of editing a file by overwriting and appending it in the created file
+
+devops@SHIV:~$
 
 Displays the last two lines.
 
