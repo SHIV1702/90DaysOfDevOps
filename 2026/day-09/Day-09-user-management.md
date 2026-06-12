@@ -2,7 +2,7 @@
 
 ## Objective
 
-The goal of this challenge was to gain hands-on experience with Linux user management, group management, permissions, and shared directory access. These concepts are fundamental for Linux administration and DevOps environments where multiple users collaborate on the same systems.
+The goal of this challenge was to gain hands-on experience with Linux user management, group management, permissions, and shared directory access. 
 
 ---
 
