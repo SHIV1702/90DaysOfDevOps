@@ -6,24 +6,24 @@ Deploy a web server on a cloud instance, configure security groups, access it th
 
 ## Commands Used
 
-ssh -i day08.pem ubuntu@<PUBLIC-IP>
+ssh -i nginx server key.pem ubuntu@<PUBLIC-IP>
 
 sudo apt update
-sudo apt upgrade -y
 
 sudo apt install nginx -y
 
 sudo systemctl status nginx
+
 sudo systemctl enable nginx
 
 curl localhost
 
-sudo tail -20 /var/log/nginx/access.log
-sudo tail -20 /var/log/nginx/error.log
+tail -f /var/log/nginx/access.log
+tail -f /var/log/nginx/error.log
 
 cat /var/log/nginx/access.log > ~/nginx-logs.txt
 
-scp -i day08.pem ubuntu@<PUBLIC-IP>:~/nginx-logs.txt .
+scp -i nginx server key.pem ubuntu@<PUBLIC-IP>:~/nginx-logs.txt /localpath 
 
 
 ## Challenges Faced
