@@ -19,6 +19,7 @@ sudo systemctl enable nginx
 curl localhost
 
 tail -f /var/log/nginx/access.log
+
 tail -f /var/log/nginx/error.log
 
 cat /var/log/nginx/access.log > ~/nginx-logs.txt
